@@ -1,0 +1,41 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "128": "icons/logo_128.png",
+         "16": "icons/logo_16.png",
+         "32": "icons/logo_32.png",
+         "48": "icons/logo_48.png"
+      },
+      "default_popup": "popup/popup.html",
+      "default_title": "Shopee Fans"
+   },
+   "content_scripts": [ {
+      "all_frames": false,
+      "js": [ "content_scripts/content-script.js" ],
+      "matches": [ "*://*.shopee.tw/*", "*://shopee.tw/*", "*://*.shopee.cn/*", "*://shopee.cn/*", "*://*.shopeesz.com/*", "*://*.shopee.co.id/*", "*://shopee.co.id/*", "*://*.shopee.vn/*", "*://shopee.vn/*", "*://shopee.co.th/*", "*://*.shopee.co.th/*", "*://shopee.ph/*", "*://*.shopee.ph/*", "*://shopee.com.my/*", "*://*.shopee.com.my/*", "*://shopee.sg/*", "*://*.shopee.sg/*", "*://shopee.com/*", "*://*.shopee.com/*", "*://shopee.com.br/*", "*://*.shopee.com.br/*", "*://shopee.com.mx/*", "*://*.shopee.com.mx/*", "*://*.keyouyun.com/*", "*://*.1688.com/*", "*://*.lazada.com.my/*", "*://*.lazada.co.id/*", "*://*.lazada.com.ph/*", "*://*.lazada.sg/*", "*://*.lazada.co.th/*", "*://*.lazada.vn/*", "*://*.aliexpress.com/*", "*://*.xiapibuy.com/*", "*://*.taobao.com/*", "*://*.tmall.com/*", "*://*.tmall.hk/*", "*://*.yangkeduo.com/*", "*://*.17zwd.com/*" ]
+   }, {
+      "all_frames": true,
+      "js": [ "content_scripts/content-frame.js" ],
+      "matches": [ "*://*.1688.com/order/buyer_order_list.htm?*" ]
+   } ],
+   "content_security_policy": "script-src 'self' https://erp.keyouyun.com/ 'unsafe-eval'; object-src 'self'",
+   "default_locale": "en",
+   "description": "__MSG_EXTENSION_DESCRIPTION__",
+   "homepage_url": "http://www.shopeefans.com/",
+   "icons": {
+      "128": "icons/logo_128.png",
+      "16": "icons/logo_16.png",
+      "32": "icons/logo_32.png",
+      "48": "icons/logo_48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqvF+uRqXgZE5leQ8d1DcEWahHo6VYMwLBZ3ZQ/B7LLcUa21pE44elsDPZLSabXGif6kUcshB9qcvS1kLY+1lUmuMjg13VNXFl6eEZNLIVlxkQjrNNtM5Aoa713cew0ST7EWpzS10WIh1dcmKPptn/76WJwRWqYsk7ccHWb5RXlpO1EQE9r8+Z9w+wX/ByFBeQgvoIj82UkvmaT+9moRBX7hfYzKxnmjuJCv1LUNjuH4uXR84RAjxVYWOasjWqAlUUTeBz23ZzjuZNOTV05tqO6U88wcCEa7cWCcJXLcvfMEUTc4Y75YOQfZH78VqVwb0n8u+8TYFKnjQtOMykVZCQQIDAQAB",
+   "manifest_version": 2,
+   "name": "__MSG_EXTENSION_NAME__",
+   "permissions": [ "downloads", "notifications", "activeTab", "storage", "cookies", "webNavigation", "*://*.shopee.tw/*", "*://shopee.tw/*", "*://*.shopee.cn/*", "*://shopee.cn/*", "*://*.shopeesz.com/*", "*://*.shopee.co.id/*", "*://shopee.co.id/*", "*://*.shopee.vn/*", "*://shopee.vn/*", "*://shopee.co.th/*", "*://*.shopee.co.th/*", "*://shopee.ph/*", "*://*.shopee.ph/*", "*://shopee.com.my/*", "*://*.shopee.com.my/*", "*://shopee.sg/*", "*://*.shopee.sg/*", "*://shopee.com.br/*", "*://*.shopee.com.br/*", "*://shopee.com/*", "*://*.shopee.com/*", "*://*.izhiliu.com/*", "*://*.keyouyun.com/*", "*://*.google.cn/*", "*://*.1688.com/*", "*://*.alicdn.com/*", "*://*.taobaocdn.com/*", "*://*.aliexpress.com/*", "*://*.taobao.com/*", "*://*.tmall.com/*", "*://*.tmall.hk/*", "*://*.alibaba.com/*", "*://*.shenjian.io/*", "*://*.currencyconverterapi.com/*", "*://*.lazada.com.my/*", "*://*.lazada.co.id/*", "*://*.lazada.com.ph/*", "*://*.lazada.sg/*", "*://*.lazada.co.th/*", "*://*.lazada.vn/*", "*://*.aliexpress.com/*", "*://*.xiapibuy.com/*", "*://*.17zwd.com/*", "*://yangkeduo.com/*", "*://*.yangkeduo.com/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "5.6.2"
+}
